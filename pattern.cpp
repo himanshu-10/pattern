@@ -46,6 +46,15 @@ void pattern5(int n){
     }
 }
 
+void pattern6(int n){
+    for(int i = 1; i<= n; i++){
+        for(int j = 1 ; j<= n-i+1; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+}
+
 int main(){
     int n;
     cin >> n;
@@ -54,7 +63,7 @@ int main(){
     // pattern2(n);
     // pattern3(n);
 
-    
+
     // 1
     // 22
     // 333
@@ -66,4 +75,11 @@ int main(){
     // * *
     // * 
     // pattern5(n);
+
+    // 12345
+    // 1234
+    // 123
+    // 12
+    // 1
+    // pattern6(n);
 }
