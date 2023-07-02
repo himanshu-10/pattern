@@ -104,6 +104,7 @@ void pattern10(int n){
         cout << endl;
     }
 }
+
 int main(){
     int n;
     cout << "enter number" << endl;
@@ -169,7 +170,7 @@ int main(){
     //    *** 
     //     * 
     // pattern8(n);
-    
+
 
     //     *    
     //    ***
