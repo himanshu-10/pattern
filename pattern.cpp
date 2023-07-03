@@ -182,6 +182,81 @@ void pattern16(int n){
     }
 }
 
+void pattern17(int n){
+    for(int i = 0; i<n; i++){
+        //space
+        for(int j=0; j<n-i-1; j++){
+            cout << " ";
+        }
+        // character
+        char ch = 'A';
+        int breakpoint = (2*i+1)/2;
+        for(int j = 1; j<=2*i+1; j++){
+            cout << ch;
+            if(j <= breakpoint)
+                ch++;
+            else
+                ch--;
+           
+        }
+        // space
+         for(int j=0; j<n-i-1; j++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern18(int n){
+    for(int i = 0; i< n; i++){
+        for(char ch = 'E'-i; ch <= 'E'; ch++){
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern19(int n){
+    int space = 0;
+    for(int i = 0; i<n; i++){
+        // stars
+        for(int j=0; j<n-i;j++){
+            cout << "*";
+        }
+        //space
+        
+        for(int j =0; j<space;j++){
+            cout << " ";
+        }
+
+        //stars
+        for(int j=0; j<n-i;j++){
+            cout <<"*";
+        }
+        space+=2;
+        cout << endl;
+    }
+
+    space = 8;
+    for(int i = 1; i<=n;i++){
+         // stars
+        for(int j=1; j<=i;j++){
+            cout << "*";
+        }
+        //space
+        
+        for(int j =0; j<space;j++){
+            cout << " ";
+        }
+
+        //stars
+        for(int j=1; j<=i;j++){
+            cout <<"*";
+        }
+        space-=2;
+        cout << endl;
+    }
+}
 
 int main(){
     int n;
@@ -313,6 +388,40 @@ int main(){
     // A
     // pattern14(n);
 
-    pattern16(n);
 
+    // A         
+    // B B       
+    // C C C     
+    // D D D D   
+    // E E E E E 
+    // pattern16(n);
+
+
+    //     A    
+    //    ABA
+    //   ABCBA  
+    //  ABCDCBA
+    // ABCDEDCBA
+    // pattern17(n);
+
+
+    // E 
+    // D E
+    // C D E
+    // B C D E
+    // A B C D E
+    // pattern18(n);
+
+
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    pattern19(n);
 }
